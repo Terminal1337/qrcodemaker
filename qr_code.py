@@ -1,3 +1,10 @@
+import os
+def cls():
+    linux = "clear"
+    windows = "cls"
+    os.system([linux,windows][os.name=="nt"])
+
+cls()
 import sys
 from colorama import Fore
 print(Fore.GREEN + '''
@@ -9,7 +16,6 @@ print(Fore.GREEN + '''
 ░░░╚═╝░░░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝  ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝''')
 print(Fore.GREEN + "                                                                    -Terminal1337")
 
-import os
 Condition = input(Fore.BLUE + "[+] Do you want me to install required module for you? Y/n: ")
 if Condition == "Y":
     os.system("pip install qrcode")
